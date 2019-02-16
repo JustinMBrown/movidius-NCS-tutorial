@@ -4,22 +4,22 @@
 
 * 1\. Introduction
   * 1.1 The General Idea
-* 2 Pre-Reqs
-  - 2.1 Installing Tensorflow with GPU support
-    - 2.1.1 Installing CUDA and cuDNN
-  - 2.2 Installing TF in a virtual environment
-  - 2.3 Setting up Pycharm
-- 3. Installing the Movidius SDK
-  - 3.1 Installing OpenCV
-- 4. Using The Movidius SDK
-  - 4.2 generating the inference-only graph
-  - 4.3 Using the inference-only graph
-    - 4.3.1 Code that uses the API without a webcam
-    - 4.3.2 Code that uses the API with a webcam
-- 5. Setting up Raspberry Pi and using the NCS
-  - 5.1 Setting up the Pi
-  - 5.2 Setting up NCSDK on the Pi
-  - 5.3 Running an NCS example on the Pi
+* 2\. Pre-Reqs
+  * 2.1 Installing Tensorflow with GPU support
+    * 2.1.1 Installing CUDA and cuDNN
+  * 2.2 Installing TF in a virtual environment
+  * 2.3 Setting up Pycharm
+* 3\. Installing the Movidius SDK
+  * 3.1 Installing OpenCV
+* 4\. Using The Movidius SDK
+  * 4.2 generating the inference-only graph
+  * 4.3 Using the inference-only graph
+    * 4.3.1 Code that uses the API without a webcam
+    * 4.3.2 Code that uses the API with a webcam
+* 5\. Setting up Raspberry Pi and using the NCS
+  * 5.1 Setting up the Pi
+  * 5.2 Setting up NCSDK on the Pi
+  * 5.3 Running an NCS example on the Pi
 
 
 # 1. Introduction
