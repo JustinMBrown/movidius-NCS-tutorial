@@ -2,9 +2,9 @@
 
 # Table of Contents
 
-* 1. Introduction
+* 1 Introduction
   * 1.1 The General Idea
-* 2. Pre-Reqs
+* 2 Pre-Reqs
   - 2.1 Installing Tensorflow with GPU support
     - 2.1.1 Installing CUDA and cuDNN
   - 2.2 Installing TF in a virtual environment
