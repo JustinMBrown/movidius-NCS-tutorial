@@ -24,7 +24,7 @@
 
 # 1. Introduction
 
-In this report I’ll be covering the full pipeline of how to use the Movidius Neural Compute Stick(NCS), from tensorflow code, to real time inferencing.
+In this tutorial I’ll be covering the full pipeline on how to use the Movidius Neural Compute Stick(NCS), from tensorflow code, to real time inferencing.
 
 ## 1.1 The General Idea
 
