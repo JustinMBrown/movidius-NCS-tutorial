@@ -12,10 +12,10 @@
 * 3\. Installing the Movidius SDK
   * 3.1 Installing OpenCV
 * 4\. Using The Movidius SDK
-  * 4.2 generating the inference-only graph
-  * 4.3 Using the inference-only graph
-    * 4.3.1 Code that uses the API without a webcam
-    * 4.3.2 Code that uses the API with a webcam
+  * 4.1 generating the inference-only graph
+  * 4.2 Using the inference-only graph
+    * 4.2.1 Code that uses the API without a webcam
+    * 4.2.2 Code that uses the API with a webcam
 * 5\. Setting up Raspberry Pi and using the NCS
   * 5.1 Setting up the Pi
   * 5.2 Setting up NCSDK on the Pi
@@ -148,7 +148,7 @@ sudo pip3 install opencv-python
 # 4. Using The Movidius SDK
 Now we're finally ready to start doing some machine learning.
 
-## 4.2 generating the inference-only graph
+## 4.1 generating the inference-only graph
 
 For this part of the tutorial I’ll be using the classic MNIST example. Specifically I’ll be following this tutorial up to a point: https://movidius.github.io/ncsdk/tf_compile_guidance.html
 
@@ -169,7 +169,7 @@ It’s basically the same command as before, but with mvNCCheck instead of mvNCC
 After that, you can profile the network by running mvNCProfile: https://movidius.github.io/ncsdk/tools/profile.html
 This command will tell you performance information, and will even help you to figure out where bottlenecks in your network are.
 
-## 4.3 Using the inference-only graph
+## 4.2 Using the inference-only graph
 
 Now that we have our graph, we can using the Movidius python API to actually load it onto the stick and start feeding it data. For this part of the tutorial I’ll be following this tutorial: https://movidius.github.io/ncsdk/ncapi/ncapi2/py_api/readme.html
 
@@ -184,13 +184,13 @@ Select Python3 or Python3.5, it doesn’t matter. Now PyCharm should be using th
 From there, the rest of that tutorial teaches you the boiler-plate that you need to get things set up. I’m going to continue with the MNIST example we’ve been working on though. It’s 99% the same though. 
 
 
-### 4.3.1 Code that uses the API without a webcam
+### 4.2.1 Code that uses the API without a webcam
 
 Check out the comments in stick.py to get an understand of what each line of code does. Be sure to run it to verify your setup works
 
 And that’s how you use Movidius Neural Compute stick using the Movidius Python API. 
 
-### 4.3.2 Code that uses the API with a webcam
+### 4.2.2 Code that uses the API with a webcam
 
 Now we’re going to make a small change to get this example to run with a webcam. Everything else is the same, now it just works with OpenCV and a webcam. Use stick_with_cam.py to test your if you set up OpenCV correctly
 
