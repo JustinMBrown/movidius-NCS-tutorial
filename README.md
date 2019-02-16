@@ -2,7 +2,7 @@
 
 # Table of Contents
 
-* 1 Introduction
+* 1\. Introduction
   * 1.1 The General Idea
 * 2 Pre-Reqs
   - 2.1 Installing Tensorflow with GPU support
