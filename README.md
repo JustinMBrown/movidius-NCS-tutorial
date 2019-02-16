@@ -1,4 +1,4 @@
-# movidius-NCS-tutorial
+## Real time, battery powered, Convolutional Neural Net inferencing on the Movidius NCS and a Raspbery Pi using a webcam
 
 # Table of Contents
 
