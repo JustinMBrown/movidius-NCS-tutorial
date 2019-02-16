@@ -21,18 +21,21 @@
 5.3 Running an NCS example on the Pi	16
 
 
-1. Introduction
+# 1. Introduction
 
 In this report I’ll be covering the full pipeline of how to use the Movidius Neural Compute Stick(NCS), from tensorflow code, to real time inferencing. Real Time object/face detection specifically will be be coming after the midterm presentation.
 1.1 The General Idea
-There are 3 main pieces of code you need to have to use the NCS. 
-Your training graph/network
-This is the code you’re running your experiments on. It includes things like dropout layers, loss functions, etc..
-Your inference-only graph/network
-This is your training code, minus the dropouts, loss functions, and anything else that is specific to training only.
-Your inference-only code
-This is the code were you input you inference-only graph into the NCS, and use the Movidius API to do inferencing, along with any other preprocessing you might need to do.
+There are 3 main pieces of code you need to have to use the NCS.
+
+- Your training graph/network
+  - This is the code you’re running your experiments on. It includes things like dropout layers, loss functions, etc..
+- Your inference-only graph/network
+  - This is your training code, minus the dropouts, loss functions, and anything else that is specific to training only.
+- Your inference-only code
+  - This is the code were you input you inference-only graph into the NCS, and use the Movidius API to do inferencing, along    with any other preprocessing you might need to do.
+
 You convert your training graph into an inference only graph, and then you load that graph file onto the stick in the inference-only code. And that’s it. Everything else in this tutorial is installation and details.
+
 2. Pre-Reqs
 This all assume that you have a clean install of ubuntu 16.04 installed. No other version will work. And if you already have tensorflow and everything else set up, feel free to skip to section 3.
 2.1 Installing Tensorflow with GPU support
