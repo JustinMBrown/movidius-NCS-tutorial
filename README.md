@@ -150,13 +150,13 @@ In your command line with your Movidius Virtual Environment(VE) activated, run t
 sudo pip3 install opencv-python
 ```
 # 4. Using The Movidius SDK
-Now we're finally ready to start doing some machine learning.
+Now we're finally ready to start doing some deep learning.
 
 ## 4.1 generating the inference-only graph
 
 For this part of the tutorial I’ll be using the classic MNIST example. Specifically I’ll be following this tutorial up to a point: https://movidius.github.io/ncsdk/tf_compile_guidance.html
 
-The mnist_deep.py you’ll be downloading is the equivalent to the classic “hello world!”, but for Machine Learning. It takes in a 28x28 image of a number, runs it through a series of convolutions, and then runs it through a fully connected layer which outputs a vector of length 10, where each element represents the probability of that number being in the image.
+The mnist_deep.py you’ll be downloading is the equivalent to the classic “hello world!”, but for computer vision. It takes in a 28x28 image of a number, runs it through a series of convolutions, and then runs it through a fully connected layer which outputs a vector of length 10, where each element represents the probability of the corresponding number being in the image.
 
 That tutorial is really informative, and you should now be able to follow it. You’ll need your tensorflow-gpu virtual environment for that tutorial, and then the movidius sdk virtual environment for this next part.
 
