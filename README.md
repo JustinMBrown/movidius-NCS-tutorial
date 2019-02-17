@@ -1,6 +1,7 @@
 ## Real time, battery powered, Convolutional Neural Net inferencing on the Movidius NCS and a Raspbery Pi
 
 Video demonstration:
+
 [![Demo](https://img.youtube.com/vi/d3LaCuHUeLg/0.jpg)](https://www.youtube.com/watch?v=d3LaCuHUeLg)
 
 # Table of Contents
