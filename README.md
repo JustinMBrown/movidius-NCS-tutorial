@@ -72,7 +72,7 @@ And from there you can paste in all of the exports to the bottom of the file.
 
 ## 2.2 Installing TF in a virtual environment
 
-Finally, we can now instal TF following this tutorial: https://www.tensorflow.org/install/pip
+Finally, we can now install TF following this tutorial: https://www.tensorflow.org/install/pip
 
 That tutorial is straightforward, and there’s not much you can mess up as long as you follow their instructions.
 
