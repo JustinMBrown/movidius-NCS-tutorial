@@ -1,4 +1,4 @@
-## Real time, battery powered, Convolutional Neural Net inferencing on the Movidius NCS and a Raspbery Pi using a webcam
+## Real time, battery powered, Convolutional Neural Net inferencing on the Movidius NCS and a Raspbery Pi
 
 # Table of Contents
 
