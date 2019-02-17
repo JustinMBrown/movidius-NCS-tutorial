@@ -6,7 +6,7 @@ Video demonstration:
 
 # Table of Contents
 
-* 1\. Introduction
+* 1\. [Introduction](https://github.com/JustinMBrown/movidius-NCS-tutorial#1-introduction)
   * 1.1 The General Idea
 * 2\. Pre-Reqs
   * 2.1 Installing Tensorflow with GPU support
