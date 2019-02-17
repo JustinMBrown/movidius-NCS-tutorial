@@ -28,24 +28,22 @@ Video demonstration:
 
 # 1. Introduction
 
-In this tutorial I’ll be covering the full pipeline on how to use the Movidius Neural Compute Stick(NCS), from tensorflow code, to real time inferencing.
+In this tutorial I’ll be covering the full pipeline on how to use the Movidius Neural Compute Stick(NCS).This covers installation of everything you'll need, training your own convolutional neural network in Tensorflow, and running your trained model on the Movidius NCS and a Raspberry Pi
 
 ## 1.1 The General Idea
 
-There are 3 main pieces of code you need to have to use the NCS.
+There are 3 main pieces of code we'll be creating to use the NCS.
 
 - Your training graph/network
-  - This is the code you’re running your experiments on. It includes things like dropout layers, loss functions, etc..
+  - This is the code that trains your Neural Network. It includes things like dropout layers, loss functions, etc..
 - Your inference-only graph/network
   - This is your training code, minus the dropouts, loss functions, and anything else that is specific to training only.
 - Your inference-only code
-  - This is the code were you input you inference-only graph into the NCS, and use the Movidius API to do inferencing, along    with any other preprocessing you might need to do.
-
-You convert your training graph into an inference only graph, and then you load that graph file onto the stick in the inference-only code. And that’s it. Everything else in this tutorial is installation and details.
+  - This is the code were you load your inference-only graph onto the NCS, and use the Movidius API to do inferencing, along    with any other preprocessing you might need to do. This is also where we will be using the webcam.
 
 # 2. Pre-Reqs
 
-This all assume that you have a clean install of ubuntu 16.04 installed. No other version will work. And if you already have tensorflow and everything else set up, feel free to skip to section 3.
+This all assume that you have a clean install of ubuntu 16.04 installed. No other version will work. If you already have tensorflow and everything else set up, feel free to skip to section 3.
 
 ## 2.1 Installing Tensorflow with GPU support
 Once you have a working ubuntu 16.04 OS up and running, the first thing to do is install tensorflow. I have installed tensorflow in every single way possible, and this method is by far the most straight forward.
@@ -53,7 +51,7 @@ Once you have a working ubuntu 16.04 OS up and running, the first thing to do is
 ### 2.1.1 Installing CUDA and cuDNN
 First things first, we have to get our GPU-software set up. This comes in the form of CUDA. See the directions here: https://www.tensorflow.org/install/gpu
 
-The direction in that guide are pretty straight forward, but there are some things to double check. Make sure you install the exact versions specified. Notice that the guide calls for CUDA 9.0, but if you click their link it takes you to 10.0. Version 9.0 can be found here: https://developer.nvidia.com/cuda-90-download-archive
+The direction in that guide are pretty straight forward, but there are some details to double check. Make sure you install the exact versions specified. Notice that the guide calls for CUDA 9.0, but if you click their link it takes you to 10.0. Version 9.0 can be found here: https://developer.nvidia.com/cuda-90-download-archive
 
 You only need the base-installer
 
@@ -65,7 +63,7 @@ Next is to run:
 ```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
 ```
-I recommend adding all of the exports you encounter to your .bashrc file, which can be found in your home directory.
+I recommend adding all of the export commands you encounter to your .bashrc file, which can be found in your home directory.
 ```
 cd ~
 Sudo nano .bashrc
@@ -164,11 +162,10 @@ The mnist_deep.py you’ll be downloading is the equivalent to the classic “he
 
 That tutorial is really informative, and you should now be able to follow it. You’ll need your tensorflow-gpu virtual environment for that tutorial, and then the movidius sdk virtual environment for this next part.
 
-At the end of that tutorial, to run this command: 
+At the end of that tutorial, remember to activate your movidius sdk virtual environment in the command prompt first, before running this command: 
 ```
 mvNCCompile mnist_inference.meta -s 12 -in input -on output -o mnist_inference.graph
-```
-remember to activate your movidius sdk virtual environment in the command prompt first, and then run that command in the command prompt. 
+``` 
 
 After you’ve successfully outputted mnist_inference.graph, next you should check to make sure it’s a good graph by using mvNCCheck: https://movidius.github.io/ncsdk/tools/check.html
 
