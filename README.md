@@ -28,6 +28,8 @@ Video demonstration:
 
 # 1. Introduction
 
+Edit: This is now 8 months old and counting, which in computer-vision-years is super old. If you're just now geting into this, I sugest checking on Intel's OpenVINO and seeing if it's mature yet. If not, this tutorial is still a good exercise and will teach you a lot about optimizing and deploying models on real hardware.
+
 In this tutorial I’ll be covering the full pipeline on how to use the Movidius Neural Compute Stick(NCS).This covers installation of everything you'll need, training your own convolutional neural network in Tensorflow, and running your trained model on the Movidius NCS and a Raspberry Pi
 
 ## 1.1 The General Idea
